@@ -1,0 +1,23 @@
+streamlit==1.22.0
+pyspark==3.4.0
+pandas==1.5.3
+numpy==1.24.3
+matplotlib==3.7.1
+seaborn==0.12.2
+plotly==5.14.1
+openpyxl==3.1.2
+python -m streamlit run app.py
+
+
+
+1.
+lấy data từ API UCIML
+2. clean
+Quantity > 0 , UnitPrice > 0 , tạo df chứa StockCode và Description chuẩn sau đó join với dữ liệu, clean StockCode viết thường --> viết hoa, xoá khoảng trắng.
+3.1
+từ cleaned data ở bước 2, xử lí InvoiceDate tạo ra cột Date, month, dayofweek, hour làm dashboard
+3.2 
+từ cleaned data ở bước 2, xử lí Association analyze.
+4.
+làm dashboard = streamlit ( từ 2 file dữ liệu parquet --> đọc = pyspark --> xử lí = pyspark --> output chuyển sang pandas --> visualize = plotly )
+dashboard gồm 4 tab 
